@@ -4,48 +4,7 @@ import java.util.ArrayList;
 
 public class Quicksort 
 {
-
-    private ArrayList<Address> sortArray = new ArrayList<>();
-    private Address add;
-
-    public void addArrayData(Address s) {
-        sortArray.add(new Address("dd"));
-        sortArray.add(new Address("de"));
-        sortArray.add(new Address("dr"));
-        sortArray.add(new Address("dt"));
-        sortArray.add(new Address("dy"));
-        sortArray.add(new Address("du"));
-        sortArray.add(new Address("di"));
-        
-    }
-
-    public ArrayList<Address> add(ArrayList<Address> list) {
-        if (list.size() <= 1) {
-            return list;
-        }
-
-        ArrayList<Address> sorted = new ArrayList<>();
-        ArrayList<Address> small = new ArrayList<>();
-        ArrayList<Address> big = new ArrayList<>();
-        Address pivot = list.get(list.size() - 1);
-
-        for (int i = 0; i < list.size() - 1; i++) {
-            if (list.get(i).compareTo(pivot) < 0) {
-                small.add(list.get(i));
-            } else {
-                big.add(list.get(i));
-            }
-        }
-        small = add(small);
-        big = add(big);
-
-        small.add(pivot);
-        small.addAll(big);
-        sorted = small;
-
-        return sorted;
-    }
-
+    
     public ArrayList<Address> quickSort(ArrayList<Address> list) 
     {
         if(list.size() <= 1) 
@@ -53,8 +12,8 @@ public class Quicksort
             return list; // start with recursion base case
         }
         ArrayList<Address> sorted;  // this shall be the sorted list to return, no needd to initialise
-        ArrayList<Address> smaller = new ArrayList<Address>(); // Address' smaller than pivot
-        ArrayList<Address> greater = new ArrayList<Address>(); // Address' greater than pivot
+        ArrayList<Address> smaller = new ArrayList<>(); // Address' smaller than pivot
+        ArrayList<Address> greater = new ArrayList<>(); // Address' greater than pivot
         //Address pivot = list.get(0);  // first Address in list, used as pivot
         Address pivot = list.get(list.size() / 2); //middle value
         int i;
