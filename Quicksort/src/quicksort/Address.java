@@ -9,4 +9,8 @@ public class Address {
   Address(String st){
     street = st;
   }
+ 
+    public int compareTo(Address one) {
+      return 0; 
+    }
 }
