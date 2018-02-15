@@ -51,13 +51,13 @@ public class Quicksort
 
     public ArrayList<Address> quickSort(ArrayList<Address> list) 
     {
-        if (list.isEmpty()) 
+        if (list.size() <= 1) 
         {
             return list; // start with recursion base case
         }
         ArrayList<Address> sorted;  // this shall be the sorted list to return, no needd to initialise
-        ArrayList<Address> smaller = new ArrayList<Address>(); // Address' smaller than pivot
-        ArrayList<Address> greater = new ArrayList<Address>(); // Address' greater than pivot
+        ArrayList<Address> smaller = new ArrayList<>(); // Address' smaller than pivot
+        ArrayList<Address> greater = new ArrayList<>(); // Address' greater than pivot
         //Address pivot = list.get(0);  // first Address in list, used as pivot
         Address pivot = list.get(list.size() / 2); //middle value
         int i;

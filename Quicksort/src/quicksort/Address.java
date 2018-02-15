@@ -13,7 +13,6 @@ public class Address implements Comparable<Address>{
     @Override
     public int compareTo(Address o) 
     {
-        //throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
         return this.street.compareToIgnoreCase(o.street);
     }
 }
