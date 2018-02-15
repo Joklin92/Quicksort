@@ -38,10 +38,11 @@ public class QuicksortTest {
         System.out.println("quick");
         ArrayList<Address> list = new ArrayList<>();
         Quicksort qs = new Quicksort();
-        list.add(new Address("A"));
+        Address expected = new Address(""); 
+        list.add(expected);
         list = qs.quickSort(list);
         assertTrue(list.size() == 1);
         System.out.println("Size is: " + list.size());
-        assertEquals("A", list);
+        assertEquals(expected, list.get(0));
     }
 }
