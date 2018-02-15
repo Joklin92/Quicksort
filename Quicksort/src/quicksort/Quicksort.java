@@ -2,7 +2,8 @@ package quicksort;
 
 import java.util.ArrayList;
 
-public class Quicksort implements Comparable<Address> {
+public class Quicksort 
+{
 
     private ArrayList<Address> sortArray = new ArrayList<>();
     private Address add;
@@ -58,7 +59,7 @@ public class Quicksort implements Comparable<Address> {
         ArrayList<Address> smaller = new ArrayList<Address>(); // Address' smaller than pivot
         ArrayList<Address> greater = new ArrayList<Address>(); // Address' greater than pivot
         //Address pivot = list.get(0);  // first Address in list, used as pivot
-        Address pivot = list.get(list.size() / 2);
+        Address pivot = list.get(list.size() / 2); //middle value
         int i;
         Address j;  // Variable used for Address' in the loop
         for(i = 1; i < list.size(); i++) 
@@ -81,5 +82,4 @@ public class Quicksort implements Comparable<Address> {
 
         return sorted;
     }
-
 }

@@ -4,13 +4,16 @@ package quicksort;
  * The purpose of Address is to...
  * @author kasper
  */
-public class Address {
+public class Address implements Comparable<Address>{
   String street;
   Address(String st){
     street = st;
   }
- 
-    public int compareTo(Address one) {
-      return 0; 
+
+    @Override
+    public int compareTo(Address o) 
+    {
+        //throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        return this.street.compareToIgnoreCase(o.street);
     }
 }
