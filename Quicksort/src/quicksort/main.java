@@ -6,13 +6,7 @@ import java.util.ArrayList;
 public class main {
     
     public static void main(String[] args) {
-//        Sem2HashMap hm = new Sem2HashMap();
-//        
-//        hm.put("herp", new Address("derp"));
-//        
-//        hm.put("SURP", new Address("LERP"));
-//        
-//        System.out.println(hm.get("herp").toString());
+
         Quicksort qs = new Quicksort();
         ArrayList<Address> list = new ArrayList<>();
         list.add(new Address("A")); 

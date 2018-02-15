@@ -45,4 +45,15 @@ public class QuicksortTest {
         System.out.println("Size is: " + list.size());
         assertEquals(expected, list.get(0));
     }
+        @Test
+    public void testQuickSort0() 
+    {
+        
+        ArrayList<Address> list = new ArrayList<>();
+        Quicksort qs = new Quicksort();      
+        list = qs.quickSort(list);
+        assertTrue(list.size() == 0);
+        System.out.println("Size is: " + list.size());
+        assertEquals(0, list.get(0));
+    }
 }
