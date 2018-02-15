@@ -10,7 +10,8 @@ public class Quicksort
         if(list.size() <= 1) 
         {
             return list; // start with recursion base case
-        }
+        } 
+        
         ArrayList<Address> sorted;  // this shall be the sorted list to return, no needd to initialise
         ArrayList<Address> smaller = new ArrayList<>(); // Address' smaller than pivot
         ArrayList<Address> greater = new ArrayList<>(); // Address' greater than pivot

@@ -16,21 +16,20 @@ import org.junit.Test;
  * @author malik
  */
 public class QuicksortTest {
-    
+
     public QuicksortTest() {
     }
-    
+
     @Before
     public void setUp() {
     }
 
     @Test
-    public void testQuickSort() 
-    {
+    public void testQuickSort() {
         System.out.println("quick");
-        
+
         Quicksort qs = new Quicksort();
-        
+
         ArrayList<Address> expected = new ArrayList<>();
         expected.add(new Address("A"));
         expected.add(new Address("B"));
@@ -54,22 +53,35 @@ public class QuicksortTest {
         actual.add(new Address("H"));
         actual.add(new Address("G"));
         actual.add(new Address("F"));
-        
 
         actual = qs.quickSort(actual);
-        
+
         assertEquals(10, actual.size());
         assertEquals(expected, actual);
     }
+
+    @Test
+    public void testQuickSort1() {
+        Quicksort qs = new Quicksort();
+        ArrayList<Address> actual = new ArrayList<>();
+        actual.add(new Address("C"));
+        ArrayList<Address> expected = new ArrayList<>();
+        expected.add(new Address("C"));
+
+        actual = qs.quickSort(actual);
+        assertEquals(1, actual.size());
+        assertEquals(expected, actual);
+    }
+    
         @Test
-    public void testQuickSort0() 
-    {
+    public void testQuickSort0() {
+        Quicksort qs = new Quicksort();
+        ArrayList<Address> actual = new ArrayList<>();
+        ArrayList<Address> expected = new ArrayList<>();
+
+        actual = qs.quickSort(actual);
         
-        ArrayList<Address> list = new ArrayList<>();
-        Quicksort qs = new Quicksort();      
-        list = qs.quickSort(list);
-        assertTrue(list.size() == 0);
-        System.out.println("Size is: " + list.size());
-        assertEquals(0, list.get(0));
+        assertEquals(0, actual.size());
+        assertEquals(expected, actual);
     }
 }
