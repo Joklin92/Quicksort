@@ -9,10 +9,17 @@ public class Address implements Comparable<Address>{
   Address(String st){
     street = st;
   }
-
+  
     @Override
     public int compareTo(Address o) 
     {
         return this.street.compareToIgnoreCase(o.street);
     }
+
+    @Override
+    public String toString() {
+        return street;
+    }
+    
+    
 }

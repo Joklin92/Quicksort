@@ -8,7 +8,7 @@ public class Quicksort
     private ArrayList<Address> sortArray = new ArrayList<>();
     private Address add;
 
-    public void addArrayData() {
+    public void addArrayData(Address s) {
         sortArray.add(new Address("dd"));
         sortArray.add(new Address("de"));
         sortArray.add(new Address("dr"));
@@ -16,10 +16,7 @@ public class Quicksort
         sortArray.add(new Address("dy"));
         sortArray.add(new Address("du"));
         sortArray.add(new Address("di"));
-    }
-
-    public void sorter() {
-
+        
     }
 
     public ArrayList<Address> add(ArrayList<Address> list) {
@@ -51,25 +48,25 @@ public class Quicksort
 
     public ArrayList<Address> quickSort(ArrayList<Address> list) 
     {
-        if (list.size() <= 1) 
+        if(list.size() <= 1) 
         {
             return list; // start with recursion base case
         }
         ArrayList<Address> sorted;  // this shall be the sorted list to return, no needd to initialise
-        ArrayList<Address> smaller = new ArrayList<>(); // Address' smaller than pivot
-        ArrayList<Address> greater = new ArrayList<>(); // Address' greater than pivot
+        ArrayList<Address> smaller = new ArrayList<Address>(); // Address' smaller than pivot
+        ArrayList<Address> greater = new ArrayList<Address>(); // Address' greater than pivot
         //Address pivot = list.get(0);  // first Address in list, used as pivot
         Address pivot = list.get(list.size() / 2); //middle value
         int i;
         Address j;  // Variable used for Address' in the loop
-        for(i = 1; i < list.size(); i++) 
+        for(i = 0; i < list.size(); i++) 
         {
             j = list.get(i);
-            if (j.compareTo(pivot) < 0) //make sure Address has proper compareTo method 
+            if(j.compareTo(pivot) < 0) //make sure Address has proper compareTo method 
             {
                 smaller.add(j);
             } 
-            else 
+            else if (j.compareTo(pivot) > 0) 
             {
                 greater.add(j);
             }
